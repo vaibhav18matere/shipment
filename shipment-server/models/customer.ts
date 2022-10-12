@@ -14,6 +14,7 @@ const customerSchema = new mongoose.Schema(
     },
     password: {
       type: String,
+      require:true,
     },
     email: {
       type: String,
@@ -21,6 +22,7 @@ const customerSchema = new mongoose.Schema(
     mobile: {
       type: Number,
       maxLength: 10,
+      require : true,
     },
   },
   { timestamps: true }

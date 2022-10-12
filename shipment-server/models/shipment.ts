@@ -16,7 +16,7 @@ const shipmentSchema = new mongoose.Schema({
     require: true,
   },
   hsnCode: {
-    type: String,
+    type: Number,
     required: true,
   },
   weightOfShipment: {
