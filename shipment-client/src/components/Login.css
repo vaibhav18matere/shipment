@@ -1,0 +1,43 @@
+.button {
+    height: 32px;
+    border-radius: 4px;
+    position: relative;
+    left: 179px;
+}
+
+.login-form {
+    justify-content: center;
+    position: absolute;
+    left: 260px !important;
+    bottom: 200px !important;
+}
+
+.input-box{
+    width: 400px !important;
+    height: 40px !important;
+    border-radius: 4px;
+    border: solid 1px gray;
+    margin-top: 8px !important;
+}
+
+.left-portion {
+    width: 60%;
+    height: 892px;
+    float: left;
+}
+
+.right-portion {
+    height: 892px;
+    width: 40%;
+    float: right;
+}
+
+label {
+    width: 42px;
+    height: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.1px;
+}
