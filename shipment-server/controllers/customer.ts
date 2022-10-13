@@ -80,3 +80,13 @@ export const deleteCustomer = async (req:Request, res:Response, next:NextFunctio
     message: "Customer Deleted Successfully",
   });
 };
+
+export const login =async (req:Request, res:Response, next:NextFunction) => {
+  const checkedUser = await Customer.find({ email: req.body.userName })
+  if (checkedUser) {
+    res.status(200).json({
+    isValidUser: true,
+    message: "Customer Successfully login",
+  });
+  }
+}

@@ -1,13 +1,14 @@
 import React from 'react';
-import './App.css';
-import User from './components/User';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import Shipment from './components/Shipment';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <User />
+        <Login />
+        <Signup />
         <Shipment />
       </header>
     </div>
