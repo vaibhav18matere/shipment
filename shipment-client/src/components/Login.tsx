@@ -28,8 +28,17 @@ const Login = () => {
      return (
           <>
                <h1>Login Form</h1>
-               <Form className="login-form">
-                              <Form.Item
+         <Form className="login-form"
+                   autoComplete="off"
+          labelCol={{ span: 10 }}
+          wrapperCol={{ span: 14 }}
+          onFinish={(values) => {
+          console.log({ values });
+          }}
+          onFinishFailed={(error) => {
+            console.log({ error });
+          }}>
+          <Form.Item
             name="email"
             label="Email"
             rules={[
@@ -86,15 +95,35 @@ const Login = () => {
             hasFeedback
           >
           <Input.Password placeholder="Confirm your password" />
-          </Form.Item>
+           </Form.Item>
+           
+                     <Form.Item
+            name="agreement"
+            wrapperCol={{ span: 24 }}
+            valuePropName="checked"
+            rules={[
+              {
+                validator: (_, value) =>
+                  value
+                    ? Promise.resolve()
+                    : Promise.reject(
+                        "To proceed, you need to agree with our terms and conditions"
+                      ),
+              },
+            ]}
+          >
           <Checkbox>
-              Agree to <a href="/">terms & conditions</a>
-          </Checkbox>
-          <Button onClick={handleSubmit} type="primary" htmlType="submit" className="login-form-button button">
-               Log in
-          </Button>          
-               </Form>
-               <footer>Don't have an account?<Link to="./Signup">Signup</Link></footer>
+              Agree to <a href="#">terms & conditions</a>
+             </Checkbox>
+              <Link to="/signup"> create new account</Link>
+          </Form.Item>
+
+          <Form.Item wrapperCol={{ span: 24 }}>
+            <Button block type="primary" htmlType="submit">
+              Login
+            </Button>
+          </Form.Item>
+          </Form> 
           </>
   )
 

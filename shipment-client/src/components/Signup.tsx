@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Button, Checkbox, Input } from "antd";
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
      return (
@@ -10,7 +11,7 @@ const Signup = () => {
           labelCol={{ span: 10 }}
           wrapperCol={{ span: 14 }}
           onFinish={(values) => {
-            console.log({ values });
+          console.log({ values });
           }}
           onFinishFailed={(error) => {
             console.log({ error });
@@ -123,8 +124,9 @@ const Signup = () => {
             ]}
           >
           <Checkbox>
-              Agree to <a href="/">terms & conditions</a>
-          </Checkbox>
+              Agree to <a href="#">terms & conditions</a>
+             </Checkbox>
+              <Link to="/"> already have an account</Link>
           </Form.Item>
 
           <Form.Item wrapperCol={{ span: 24 }}>
